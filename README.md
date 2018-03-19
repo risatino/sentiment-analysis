@@ -1,5 +1,1 @@
-#### sentiment-analysis:A 
-#### News Mood
-
-#### sentiment-analysis:B 
-#### PlotBot
+#### Sentiment Analysis: News Mood
