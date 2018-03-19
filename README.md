@@ -1,4 +1,13 @@
-#### Sentiment Analysis: News Mood
+
+### News Mood Sentiment Analysis
+
+#### 3 Key Points:
+1. Depending on the news at the time of the data being collected, it is difficult to have a consistent analysis. The data collected from Tweets, fluctuates often.
+2. Fox News seems to have the most negative tweets in the couple times I've run this report.
+3. News outlets are biased in what is tweeted out and depending on which political angle is projected, the data of what is defined as negative and positive seems a bit skewed.
+
+#### Project Set-Up
+
 
 ```python
 # dependencies
@@ -24,6 +33,8 @@ from config import (consumer_key,
                     access_token, 
                     access_token_secret)
 ```
+
+#### Fetch Data
 
 
 ```python
@@ -799,6 +810,8 @@ analysis_date = datetime.now().date()
 newsmoods.to_csv("Twitter_News_Mood.csv", index=False)
 ```
 
+#### Scatter Plot Magic
+
 
 ```python
 # plot scatter plot and x limit
@@ -825,8 +838,10 @@ plt.show()
 ```
 
 
-![png](output_5_0.png)
+![png](output_9_0.png)
 
+
+#### Overall (Average) Sentiment Bar Plot
 
 
 ```python
@@ -858,7 +873,7 @@ for sentiment in average_sentiment:
     plt.text(count, sentiment+.01, str(round(sentiment,2)))
     count = count + 1
 
-plt.bar(x_axis, average_sentiment, tick_label = xlabels, color = ['silver', 'b', 'y', 'g', 'c'])
+plt.bar(x_axis, average_sentiment, tick_label = xlabels, color = ['silver','b','y','g','c'])
 
 # title, x axis label, and y axis label
 plt.title(f"Overall Sentiment of Media Tweets {analysis_date}")
@@ -869,10 +884,5 @@ plt.show()
 ```
 
 
-![png](output_7_0.png)
+![png](output_12_0.png)
 
-
-
-```python
-
-```
